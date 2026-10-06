@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dataset Analysis</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .value {
+            font-size: 30px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .info {
+            background: white;
+            margin-top: 25px;
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .info h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .info p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .button {
+            display: block;
+            width: 220px;
+            margin: 25px auto;
+            padding: 14px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #5568d9;
+        }
+
+        @media (max-width: 800px) {
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                padding: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <h1>📊 Dataset Analysis</h1>
+
+            <p>
+                Student Performance Prediction Dataset
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Total Students</h3>
+
+                <div class="value">
+                    {{ total_students }}
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Average Final Marks</h3>
+
+                <div class="value">
+                    {{ average_marks }}
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Highest Marks</h3>
+
+                <div class="value">
+                    {{ highest_marks }}
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Lowest Marks</h3>
+
+                <div class="value">
+                    {{ lowest_marks }}
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="info">
+
+            <h2>📚 Dataset Information</h2>
+
+            <p>
+                The dataset contains student academic performance
+                information used to train the Machine Learning model.
+            </p>
+
+            <p>
+                The dataset includes attendance, study hours,
+                internal marks, assignment marks, previous marks,
+                practical marks and final marks.
+            </p>
+
+            <p>
+                The dataset contains
+                <strong>{{ total_students }}</strong>
+                student records.
+            </p>
+
+        </div>
+
+
+        <a href="/" class="button">
+            🏠 Back to Home
+        </a>
+
+    </div>
+
+</body>
+
+</html>
